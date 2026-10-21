@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+
+  fastapi:
+    build: .
+    container_name: taka_detection_api
+
+    ports:
+      - "8000:8000"
+
+    volumes:
+      - .:/app
+
+    restart: unless-stopped
